@@ -19,6 +19,8 @@ IMPORT=[import/run] # Either choose import for first time pbf load or run if the
 > [!IMPORTANT]  
 > Import of the data takes a while (about 10 minutes and will exit on completion, do not stop it!
 
+### Running
 
-
-
+```bash
+docker compose up
+```
