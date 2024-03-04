@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  map:
+    image: overv/openstreetmap-tile-server:2.3.0
+    volumes:
+      - osm-data:/data/database
+      - ${PATH_TO_PBF}:/data/region.osm.pbf
+    ports:
+      - "8080:80"
+    command: "${COMMAND}"
+    env_file:
+      - .env
+volumes:
+  osm-data:
